@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EZ - Panel</title>
+</head>
+<style>
+    body {
+        padding: 50px 100px;
+    }
+
+    .it-text {
+        height: 200px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    label {}
+
+    input {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+</style>
+
+<body>
+    <form method="POST" action="/blog/controller/insertData.php" enctype="multipart/form-data">
+        <label for="article_data">Data do Artigo:</label>
+        <input type="date" id="article_data" name="article_data"><br>
+
+        <label for="article_title">Título do Artigo:</label>
+        <input type="text" id="article_title" name="article_title"><br>
+
+        <label for="article_img1">Imagem 1:</label>
+        <input enctype="multipart/form-data" type="file" name="img[]" name="article_img1"><br>
+
+        <label for="article_text1">Texto 1:</label>
+        <textarea class="it-text" name="article_text1" id="article_text1" cols="30" rows="10"></textarea><br>
+
+        <label for="article_img2">Imagem 2:</label>
+        <input enctype="multipart/form-data" type="file" name="img[]" name="article_img2"><br>
+
+        <label for="article_text2">Texto 2:</label>
+        <textarea class="it-text" name="article_text2" id="article_text2" cols="30" rows="10"></textarea><br>
+
+        <label for="article_img3">Imagem 3:</label>
+        <input enctype="multipart/form-data" type="file" name="img[]" name="article_img3"><br>
+
+        <label for="article_text3">Texto 3:</label>
+        <textarea class="it-text" name="article_text3" id="article_text3" cols="30" rows="10"></textarea><br>
+
+        <label for="article_img4">Imagem 4:</label>
+        <input enctype="multipart/form-data" type="file" name="img[]" name="article_img4"><br>
+
+        <label for="article_text4">Texto 4:</label>
+        <textarea class="it-text" name="article_text4" id="article_text4" cols="30" rows="10"></textarea><br>
+
+        <label for="article_img5">Imagem 5:</label>
+        <input enctype="multipart/form-data" type="file" name="img[]" name="article_img5"><br>
+
+        <label for="article_text5">Texto 5:</label>
+        <textarea class="it-text" name="article_text5" id="article_text5" cols="30" rows="10"></textarea><br>
+
+        <label for="article_author">Autor do Artigo:</label>
+        <input type="text" id="article_author" name="article_author"><br>
+
+        <label for="article_references">Referências do Artigo:</label>
+        <input type="text" id="article_references" name="article_references"></input><br>
+
+        <label for="article_state">ID do Estado:</label>
+        <select id="article_state" name="article_state">
+            <option value="1">Paraíba</option>
+            <option value="2">Maranhão</option>
+            <option value="3">Pernanbuco</option>
+            <option value="4">Rio Grande do Norte</option>
+            <option value="5">Ceara</option>
+            <option value="6">Piauí</option>
+            <option value="7">Alagoas</option>
+            <option value="8">Sergipe</option>
+        </select><br><br>
+        <input type="submit" value="Salvar" >
+    </form>
+    <a href="?sair=1">SAIR</a>
+    <script>
+        window.addEventListener('beforeunload', function (e) {
+            <?php
+            session_destroy();
+            ?>
+            e.returnValue = 'Você tem certeza que deseja sair?';
+        });
+    </script>
+</body>
+</html>

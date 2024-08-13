@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ row.article_title }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .article h1 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .article .info {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .article .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .article img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .references {
+            font-size: 14px;
+            font-style: italic;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ row.article_title }}</h1>
+    </div>
+    <div class="article-container">
+        <div class="article">
+            <div class="info">
+                <p>ID do Artigo: {{ row.article_id }}</p>
+                <p>Data: {{ row.article_data }}</p>
+                <p>Estado: {{ row.state_id }}</p>
+                <p>Autor: {{ row.article_author }}</p>
+            </div>
+            <div class="images">
+                <img src="media/{{ row.article_img1 }}" alt="Imagem 1">
+            </div>
+            <div class="text">
+                <p>{{ row.article_text1 }}</p>
+            </div>
+            <div class="images">
+                <img src="media/{{ row.article_img2 }}" alt="Imagem 1">
+            </div>
+            <div class="text">
+                <p>{{ row.article_text2 }}</p>
+            </div>
+            <div class="images">
+                <img src="media/{{ row.article_img3 }}" alt="Imagem 1">
+            </div>
+            <div class="text">
+                <p>{{ row.article_text3 }}</p>
+            </div>
+            <div class="images">
+                <img src="media/{{ row.article_img4 }}" alt="Imagem 1">
+            </div>
+            <div class="text">
+                <p>{{ row.article_text4 }}</p>
+            </div>
+            <div class="images">
+                <img src="media/{{ row.article_img5 }}" alt="Imagem 1">
+            </div>
+            <div class="text">
+                <p>{{ row.article_text5 }}</p>
+            </div>
+            <div class="references">
+                Referências: {{ row.article_references }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

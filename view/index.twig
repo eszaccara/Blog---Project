@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titleheader }}</title>
+    <link rel="stylesheet" href="./view/css/reset.css">
+    <link rel="stylesheet" href="./view/css/index.css">
+</head>
+
+<body>
+    <div class="container-main">
+        <div class="container-menuitens-cell">
+            Produção
+        </div>
+        <header>
+            <div class="container-socialmedia-cell">
+                <img class="socialmedia-menu-cell" src="./view/imgs/menu.svg">
+            </div>
+            <div class="container-socialmedia">
+                <div>
+                    <a href=""><img class="logo-sec" src="./view/imgs/logo-sec.png"></a>
+                </div>
+                <div>
+                    <a href="error.html"><img class="logo-socialmedia" src="./view/imgs/facebook.png"></a>
+                    <a href="error.html"><img class="logo-socialmedia" src="./view/imgs/twitter.png"></a>
+                    <a href="error.html"><img class="logo-socialmedia" src="./view/imgs/whatsapp.png"></a>
+                    <a href="error.html"><img class="logo-socialmedia" src="./view/imgs/youtube.png"></a>
+                    <a href="access"><img class="logo-socialmedia" src="./view/imgs/config.png"></a>
+                </div>
+            </div>
+            <div class="container-logo">
+                <img class="logo-main" src="./view/imgs/logo-main.png">
+            </div>
+            <div class="container-slide">
+                <div class="container-menu">
+                    <div class="container-menu-itens">
+                        <div class="container-menu-item">
+                            <a href="error.com">
+                                <img class="icons-menu" src="./view/imgs/icone-hospedagens.png">
+                                <a href="error" class="menu-item">Hospedagens</a>
+                            </a>
+                            <a class="menu-item-margin" href="error.com">
+                                <img class="icons-menu" src="./view/imgs/icone-destinos.png">
+                                <a href="error.com" class="menu-item">Destinos</a>
+                            </a>
+                            <a class="menu-item-margin" href="error.com">
+                                <img class="icons-menu" src="./view/imgs/icone-cruzeiros.png">
+                                <a href="error.com" class="menu-item">Cruzeiros</a>
+                            </a>
+                            <a class="menu-item-margin" href="error.com">
+                                <img class="icons-menu" src="./view/imgs/icone-carros.png">
+                                <a href="error.com" class="menu-item">Carros</a>
+                            </a>
+                            <a class="menu-item-margin" href="error.com">
+                                <img class="icons-menu" src="./view/imgs/icon-plane.png">
+                                <a href="error.com" class="menu-item">Destinos Abertos</a>
+                            </a>
+                        </div>
+                        <div class="container-search-box">
+                            <input class="searchbox" type="text">
+                            <a href="error.com"><img class="icon-search" src="./view/imgs/search.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container-body">
+                <div class="container-dg-head">
+                    <h1 class="title-destination-guide">Guia de destinos</h1>
+                </div>
+
+
+                <div class="container-articles">
+
+                    {% for article in articles %}
+
+                    <a class="button-click" href="artigo.php?article_id={{ article.article_id }}">
+                    <article class="article-destinationGuide">
+                        <img class="article-img" src="./media/{{ article.article_img1 }}">
+                        <span class="article-date">{{ article.article_data }}</span>
+                        <h2 class="article-title">{{ article.article_title }}</h2>
+                        <div class="minhaDiv">
+                        <p class="article-text">{{ article.article_text1 }}</p>
+                        </div>
+                    </article>
+                    </a>
+                    
+                    {% endfor %}
+
+                </div>
+                <div class="container-dg-footer">
+                    <div class="button-destination-guide" id="viewMore">
+                        <img class="icon-viewmore" src="./view/imgs/arrow-down.svg">
+                        <span>Veja mais</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container-extra">
+                <div class="container-roadguide">
+                    <div class="roadguide-link">
+                        <img class="icon-roadguide" src="./view/imgs/map.png">
+                    </div>
+                    <div class="roadguide-apresentation">
+                        <h1 class="roadguide-title">Guia de estradas</h1>
+                        <h2 class="roadguide-text">Esteja você em uma aventura rodoviária ou em uma viagem de negócios,
+                            o
+                            "Guia de Estradas" é o seu companheiro confiável para uma jornada tranquila e repleta de
+                            conveniências.</h2>
+                        <div class="button-roadguide">
+                            <img class="icon-viewmore" src="./view/imgs/arrow-down.svg">
+                            <span>Veja mais</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-tips-email">
+                    <div class="tips-email">
+                        <div class="tips-email-msg">
+                            <h1>Receba dicas de viagens por e-mail</h1>
+                        </div>
+                        <div class="tips-email-data">
+                            <input class="tips-email-input" type="text" placeholder="Nome">
+                            <input class="tips-email-input" type="text" placeholder="E-mail">
+                            <input class="tips-email-submit" type="submit" value="ENVIAR">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-footer">
+                <img class="logo-main-footer" src="./view/imgs/logo-main.png">
+                <div class="container-copyright">
+                    <img class="logo-sec-footer" src="./view/imgs/logo-sec-pt.jpg">
+                    <p>© 2023 - EZ Nordeste, Alguns direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./view/viewMore.js"></script>
+<script src="./view/limitCharacters.js"></script>
+
+</body>
+
+</html>

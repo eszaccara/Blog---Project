@@ -1,0 +1,7 @@
+{
+    "require": {
+        "monolog/monolog": "^3.4",
+        "twig/twig": "^3.7",
+        "microsoft/msphpsql": "^5.9"
+    }
+}
