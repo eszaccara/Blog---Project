@@ -1,4 +1,4 @@
-#Blog Project
+# Blog Project
 Project for creating a blog platform.
 
 PHP: The primary language used in the project, responsible for managing the server-side logic and content handling.
